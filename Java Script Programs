@@ -1,0 +1,47 @@
+Adding two Number using prompt ?
+--------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = +prompt("enter 1st number");
+        let y= +prompt("enter 2nd number");
+        let sum= x+y;
+        document.write("sum is"+ sum);
+    </script>
+</body>
+</html>
+----------------------------------------------------
+Calculate Average Mark of  Three Subject ?
+-----------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let math, eng, comp,avg;
+        math=+prompt("enter math mark");
+        eng =+prompt("entereng mark ");
+        comp =+prompt("enter comp mark");
+
+        avg=(math+eng+comp)/3;
+        if(avg>60){
+               document.write(`average mark is${avg} got 1st division`)
+        }else if(avg>=50&& avg<=60){
+            document.write(`average mark is${avg} got 2nd division`)
+        }else if(avg>=30 && avg<=50){
+            document.write(`average mark is${avg} got 3rd division`)
+        }else{
+           document.write(`average mark is${avg} got fail`)
+        }
+    </script>
+</body>
+</html>
