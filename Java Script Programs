@@ -45,3 +45,132 @@ Calculate Average Mark of  Three Subject ?
     </script>
 </body>
 </html>
+------------------------------------------------------------------------------------------
+Choose Any operator to calculate Two  Number ?
+----------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let x = +prompt("Enter 1 st number");
+      let y = +prompt("Enter 2nd  number");
+      let op = +prompt("Enter Operator(+,-,*,/)");
+
+      switch (op) {
+        case "+":
+          document.write(`${x + y}`);
+          break;
+        case "-":
+          document.write(`${x - y}`);
+          break;
+        case "*":
+          document.write(`${x * y}`);
+          break;
+        case "/":
+          document.write(`${x / y}`);
+          break;
+        default:
+          "Invalid Operator";
+      }
+    </script>
+  </body>
+</html>
+-----------------------------------------------------------------------------------
+Compaire Between Two Number?
+--------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = +prompt("enter 1st number");
+        let b = +prompt("enter 2nd number");
+        let c = +prompt("enter 3rd number");
+        if (a>=b && a>=c) {
+            document.write(`${a} is big`);
+        } else if(b>=a && b>=c){
+            document.write(`${b} is big`);
+        } else
+        document.write(`${c} is big`);
+    </script>
+</body>
+</html>
+------------------------------------------------------------------------------------
+Calculate Electric Bill Of a consumer
+------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n=+prompt("Enter Electric Bill Unit");
+        let amt=0;
+        if(n<=100){
+                 amt= n*2;
+        }else if(n>100 && n<=200){
+              amt=((100*2) +(n-100)*3);
+        }else 
+             amt=((100*2)+(100*3)+(n-300)*5);
+             document.write("Amount to be paid:"+amt);
+    </script>
+</body>
+</html>
+----------------------------------------------------------------------------------------------
+Check Enter Number Even or Odd ?
+-------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = prompt("enter a number");
+        document.write(x%2==0? "even number":"odd number");
+    </script>
+</body>
+</html>
+----------------------------------------------------------------------------------------------
+Enter 1 to 7 to know Which Day ?
+----------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n =+prompt("Enter a number 1 to 7");
+switch(n){
+    case 1:document.write("sunday");
+    break;
+    case 2:document.write("Monday");
+    break;
+    case 3:document.write("Tuesday");
+    break;
+    case 4:document.write("Wednesday");
+    break;
+    case 5:document.write("Thursday");
+    break;
+    case 6:document.write("friday");
+    break;
+    case 7:document.write("saturday");
+    break;
+    default:document.write("invalid number");
+}
+    </script>
+</body>
+</html>
