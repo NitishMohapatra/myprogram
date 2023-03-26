@@ -1,4 +1,4 @@
-Adding two Number using prompt ?
+Q .   Adding two Number using prompt ?
 --------------------------------
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +46,7 @@ Calculate Average Mark of  Three Subject ?
 </body>
 </html>
 ------------------------------------------------------------------------------------------
-Choose Any operator to calculate Two  Number ?
+Q.   Choose Any operator to calculate Two  Number ?
 ----------------------------------------------------------------------------------------------
 <!DOCTYPE html>
 <html lang="en">
@@ -79,7 +79,7 @@ Choose Any operator to calculate Two  Number ?
   </body>
 </html>
 -----------------------------------------------------------------------------------
-Compaire Between Two Number?
+Q . Compaire Between Two Number?
 --------------------------------------------------------------------------------
 <!DOCTYPE html>
 <html lang="en">
@@ -104,7 +104,7 @@ Compaire Between Two Number?
 </body>
 </html>
 ------------------------------------------------------------------------------------
-Calculate Electric Bill Of a consumer
+Q.  Calculate Electric Bill Of a consumer
 ------------------------------------------------------------------------------------
 <!DOCTYPE html>
 <html lang="en">
@@ -126,7 +126,7 @@ Calculate Electric Bill Of a consumer
 </body>
 </html>
 ----------------------------------------------------------------------------------------------
-Check Enter Number Even or Odd ?
+Q.  Check Enter Number Even or Odd ?
 -------------------------------------------------------------------------------------------------
 <!DOCTYPE html>
 <html lang="en">
@@ -144,7 +144,7 @@ Check Enter Number Even or Odd ?
 </body>
 </html>
 ----------------------------------------------------------------------------------------------
-Enter 1 to 7 to know Which Day ?
+Q.  Enter 1 to 7 to know Which Day ?
 ----------------------------------------------------------------------------------------------
 <!DOCTYPE html>
 <html lang="en">
