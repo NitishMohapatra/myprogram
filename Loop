@@ -1,0 +1,100 @@
+Q.  program to generate fibonacci series up to n terms
+-----------------------------------------------------------
+<script>
+    
+    const number = parseInt(prompt('Enter the number of terms: '));
+    let n1 = 0, n2 = 1, nextTerm;
+
+    console.log('Fibonacci Series:');
+
+    for (let i = 1; i <= number; i++) {
+        console.log(n1);
+        nextTerm = n1 + n2;
+        n1 = n2;
+        n2 = nextTerm;
+    }
+</script>
+---------------------------------------------------------------------
+Q .fizz-buzz program, 1 - 100
+---------------------------------------------------------------------
+<html>
+
+<body bgcolor=cyan>
+	<h1>
+		<script>
+			for (var i = 1; i <= 100; i++) {
+				if (i % 15 == 0)
+					console.log("Fizz Buzz");
+				else if (i % 3 == 0)
+					console.log("Fizz");
+				else if (i % 5 == 0)
+					console.log("Buzz");
+				else
+					console.log(i);
+			}
+		</script>
+</body>
+
+</html>
+----------------------------------------------------------------------------------------------------
+Q. Ask user to enter a number & check if that number is prime or not ?
+-------------------------------------------------------------------------------------
+<html>
+<body bgcolor=cyan>
+<h1>
+	<script>
+		var i= 0;
+		var j = 0;
+		
+		for (i = 1; i <= 100; i++) 
+		{			
+			var count = 0;
+			for(j=1;j<=i;j++){
+				if(i%j == 0)
+					count++;
+			}
+			if(count == 2)
+				document.writeln(i)
+		}
+	</script>
+</body>
+</html>
+---------------------------------------------------------------------------------------------
+Q.  Write a program to find the sum of first 10 natural numbers.
+----------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num=+prompt("enter a positive number");
+        let sum=0;
+for(let i=1; i<=num; i++){
+    sum=sum+i;
+}
+document.write(sum); 
+</script>
+</body>
+</html>
+--------------------------------------------------------------------------------------
+Q.   Write a program to display the multiplication table of a given integer ?
+--------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let num=+prompt("enter a number");
+    for(i=1; i<=10;i++)
+    document.write(`${num}*${i}=${num*i}<br>`);
+    </script>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------
+Q.
