@@ -1,0 +1,94 @@
+Q. Coin Flip Head or Tail ?
+-----------------------------------------------------------------
+<html>
+	<body>
+		<script>
+			let num = Math.random();
+
+			if (num < 0.5) {
+			  console.log("HEAD");
+			} else {
+			  console.log("TAIL");
+			}
+		</script>
+	</body>
+</html>
+-----------------------------------------------------------------------
+Q . Pars Integer ?
+-------------------------------------------------------------------
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+</HEAD>
+
+<BODY>
+<h1>
+<script>
+	var a = prompt("enter a number")
+	var b = prompt("enter another number")
+	
+	var x = Number.parseInt(a);
+	var y = Number.parseInt(b);
+	alert(a+y)
+	alert(x+y)
+</script>
+</form>
+</BODY>
+</HTML>
+----------------------------------------------------------------
+Q.Random Number 10-20 ?
+------------------------------------------------------------------
+<html>
+  <body>
+    <script>
+      function randomFromTo(from, to) {
+        return Math.floor(Math.random() * (to - from + 1) + from);
+        //return Math.round(Math.random() * (to - from ) + from);
+      }
+      result = randomFromTo(1000, 9999);
+      document.write(result);
+
+      //Math.floor(Math.random() * 10 + 30); // 30-40
+    </script>
+  </body>
+</html>
+--------------------------------------------------------------------
+Q. Random Word ?
+--------------------------------------------------------------------
+<html>
+  <body>
+    <script>
+      let words = ["hello", "hi", "good morning", "how are you", "bye"];
+
+      let randomInd = Math.floor(Math.random() * words.length);
+      let word = words[randomInd] + "!";
+
+      console.log(word);
+    </script>
+  </body>
+</html>
+---------------------------------------------------------------------
+Q .Shuffl Word ?
+----------------------------------------------------------------------------
+<html>
+	<body>
+		<script>
+			function shuffle (array) {
+			  var i = 0
+				, j = 0
+				, temp = null
+
+			  for (i = array.length - 1; i > 0; i -= 1) {
+				j = Math.floor(Math.random() * (i + 1))
+				temp = array[i]
+				array[i] = array[j]
+				array[j] = temp
+			  }
+			  return array;
+			}
+			let result = shuffle(['aaaa','bbbbb','ccccc','dddd','eeee'])
+			console.log(result)
+		</script>
+	</body>
+</html>
+------------------------------------------------------------------------------------
