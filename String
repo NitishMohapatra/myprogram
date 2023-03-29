@@ -1,0 +1,291 @@
+>>>>>>>>>>All Methods Of String............
+---------------------------------------------------------------------------------
+Q . CharAt()
+----------------------------------------------------------------------------
+<html>
+  <body>
+    <script>
+      var str = "I am an Engineer";
+      console.log(str.charAt(2));
+    </script>
+  </body>
+</html>
+---------------------------------------------
+Q. Char Code At()
+----------------------------------------------------------------------------
+<html>
+  <body>
+    <script>
+      var str = "I am an Engineer";
+      console.log(str.charCodeAt(2));
+    </script>
+  </body>
+</html>
+----------------------------------------------------------------------------
+Q . Eval ()
+-------------------------------------------------------------------------------
+<html>
+
+<body>
+  <script>
+    //eval() evaluates the expression in string format
+    var a = "2+3+4";
+    console.log(a);
+    console.log(eval(a));
+
+    // eval() doesn't work for string objects
+    var x = new String("2+3+4");
+    console.log(x);
+    console.log(eval(x));
+
+    // convert string object to string literal
+    var y = x.valueOf(); // y is string literal
+    console.log(eval(y));
+  </script>
+</body>
+
+</html>
+------------------------------------------------------------------------
+Q. Slice VS Substring
+--------------------------------------------------------------------------------
+<html>
+
+<body>
+  <script>
+    var a = "entertainment";
+
+    console.log(a.slice(2, 6));
+    console.log(a.substring(2, 6));
+
+    console.log(a.slice(2, -1));
+    console.log(a.substring(2, -1)); // no
+  </script>
+</body>
+
+</html>
+-----------------------------------------------------------------------------------------------
+Q.  String All Method ()
+---------------------------------------------------------------------------------------------------
+<html>
+
+<body>
+  <script>
+    var str1 = "entertainment";
+
+    console.log(str1.length);
+    console.log(str1.toUpperCase());
+    console.log(str1.toLowerCase());
+
+    console.log(str1[6]);
+    console.log(str1.at(6));
+    console.log(str1.charAt(6));
+    console.log(str1.charCodeAt(6));
+
+    console.log(str1.concat(" hello"));
+
+    console.log(str1.indexOf("t"));   //2 
+    console.log(str1.indexOf("t", 3)); //5
+    console.log(str1.indexOf("q"));    //-1
+    console.log(str1.lastIndexOf("t")); //12
+
+    console.log(str1.includes("men"));  // true
+    console.log(str1.includes("man"));  // false
+  </script>
+</body>
+
+</html>
+--------------------------------------------------------------------------------------------
+Q . Concat()
+----------------------------------------------------------------------------------------
+<html>
+  <body>
+    <script>
+      let str1 = "sachin";
+      let str2 = " tendulkar";
+      console.log(str1.concat(str2));
+    </script>
+  </body>
+</html>
+--------------------------------------------------------------------------------------------------
+Q.  Includes ()
+---------------------------------------------------------------------
+<html>
+  <body>
+    <script>
+      var str = "I am an Engineer";
+      console.log(str.includes("an"));
+      console.log(str.includes("hi"));
+    </script>
+  </body>
+</html>
+------------------------------------------------------------------------
+Q . Index of ()
+-------------------------------------------------------------------
+<html>
+  <body>
+    <script>
+      var str = "I am an Engineer";
+      console.log(str.indexOf("m"));
+      console.log(str.indexOf("an"));
+      console.log(str.indexOf("Engineer"));
+      console.log(str.indexOf("engineer")); //case-sensitive
+      console.log(str.indexOf("y"));
+    </script>
+  </body>
+</html>
+----------------------------------------------------------------------
+Q. Last index of()
+---------------------------------------------------------------------
+<html>
+  <body>
+    <script>
+      var str = "this is javascript class. this is string class";
+      console.log(str.indexOf("this"));
+      console.log(str.lastIndexOf("this"));
+    </script>
+  </body>
+</html>
+------------------------------------------------------------------------
+Q . Match ()
+---------------------------------------------------------------------------------------
+<html>
+
+<body>
+  <script>
+    var str = "The rain in SPAIN stays mainly in the plain";
+    var res = str.match(/ain/gi); // REGEX
+    document.write(res);
+    document.write('<hr/>');
+
+    var str2 = 'ram & gopal are 2 friends, ram is 15 yrs & gopal is 16 yrs';
+    var res2 = str2.match(/[0-9]{1,2}/g);
+    document.write(res2);
+  </script>
+</body>
+
+</html>
+----------------------------------------------------------------------------------------------
+Q . Replace()
+----------------------------------------------------------------------------------------------
+<html>
+  <body>
+    <script>
+      var str1 = "entertainment";
+      var str2 = str1.replace("e", "a");
+      console.log(str1, str2);
+
+      var str3 = "this is JS class, this is string class";
+      var str4 = str3.replaceAll("class", "session");
+      console.log(str3, str4);
+    </script>
+  </body>
+</html>
+-----------------------------------------------------------------------------------------------
+Q.  Search() VS Index of()
+-----------------------------------------------------------------------------------------------------
+<html>
+  <body>
+    <script>
+      // search() can take REGEX as parameter
+      // indexOf() cann't
+      let str = "This is 15th session of javascript";
+      let searchInd = str.search(/[\d]/g);
+      console.log(searchInd);
+
+      let searchInd2 = str.indexOf(/[\d]/g);
+      console.log(searchInd2);
+
+      let searchInd3 = str.indexOf("15");
+      console.log(searchInd3);
+    </script>
+  </body>
+</html>
+-------------------------------------------------------------------------------------------------------
+Q .Slice()
+-------------------------------------------------------------------------------------------------------
+<html>
+  <body>
+    <script>
+      var a = "This is javascript class";
+      var b = a.slice(3);
+      var c = a.slice(3, 9);
+
+      console.log(b);
+      console.log(c);
+    </script>
+  </body>
+</html>
+----------------------------------------------------------------------
+Q.Split()
+---------------------------------------------------------------------------
+<html>
+
+<body>
+  <script>
+    var a = "This is javascript class";
+
+    var b = a.split(" ");
+    console.log(b);
+
+    var c = a.split("*");
+    console.log(c);
+
+    var d = a.split("");
+    console.log(d);
+
+    var e = a.split('javascript');
+    console.log(e);
+
+    var f = a.split('class');
+    console.log(f);
+
+    var g = a.split('This');
+    console.log(g);
+  </script>
+</body>
+
+</html>
+--------------------------------------------------------------------
+Q. Substr()
+----------------------------------------------------------------------
+<html>
+  <body>
+    <script>
+      var x = "Goodmorning";
+
+      document.write(x.substr(4) + "<br>");
+      document.write(x.substring(4) + "<br>");
+      document.write('<hr>');
+      document.write(x.substr(4, 7) + "<br>"); // substr(start,#chars)  7
+      document.write(x.substring(4, 7));       // substring(start,end)  3
+    </script>
+  </body>
+</html>
+-----------------------------------------------------------------------
+Q. Substring()
+------------------------------------------------------------------------
+<html>
+  <body>
+    <script>
+      var x = "Goodmorning";
+
+      document.write(x.substr(1, 5) + "<br>");
+      document.write(x.substring(1, 5));
+    </script>
+  </body>
+</html>
+----------------------------------------------------------------------------------
+Q. Trim()
+-------------------------------------------------------------------
+<html>
+  <body>
+    <script>
+      var a = "              This is   String class         ";
+      var b = a.trim();
+
+      console.log(a);
+      console.log(b);
+    </script>
+  </body>
+</html>
+-----------------------------------------------------------------------------------------
