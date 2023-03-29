@@ -1,0 +1,393 @@
+Q . Show Acount Number in this Format(12********89)
+---------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<body>
+	<script>
+		function myFun(input){
+			//input='1234567898'
+			var output = '';			
+			output = input.slice(0,2)+" * * * * * * "+input.slice(7,9);			
+			return output;
+		}
+		var input = prompt("Enter 10 digit Account number");
+		result = myFun(input);
+		alert(result);
+	</script>
+</body>
+</html>
+-----------------------------------------------------
+Q. Account Number  Method 2
+----------------------------------------------------------
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+    function myFun(input) {
+      let first_sec = input.substring(0, 2);
+      let second_sec = input.substring(2, input.length - 2);
+      second_sec = second_sec.split("").fill("*").join("");
+      let third_sec = input.substring(input.length - 2, input.length);
+
+      return first_sec + second_sec + third_sec;
+    }
+    var input = prompt("Enter 10 digit Account number", "1234567891");
+    result = myFun(input);
+    alert(result);
+  </script>
+</body>
+
+</html>
+--------------------------------------------------------------------------
+Q. First Non Repeted Charater(entertainment)?
+------------------------------------------------------------------------
+<html>
+  <body>
+    <script>
+      var str = "entertainment";
+
+      for (c of str) {
+        if (str.indexOf(c) == str.lastIndexOf(c)) {
+          console.log(c);
+          break;
+        }
+      }
+    </script>
+  </body>
+</html>
+---------------------------------------------------------------------------------
+Q.Largest Common String
+=================================================================
+<!DOCTYPE html>
+<html>
+<body>
+	<script>
+		function largestCommonString(arr){
+			let sortedArr = arr.sort();			
+			first = sortedArr[0];
+			last = sortedArr[sortedArr.length-1]
+			let i = 0;
+			while(i<first.length && first.charAt(i)==last.charAt(i) ){
+				i++;
+			}
+		  return first.substring(0,i)
+		}
+		let arr = ['me','men','mexico','media','meat'];
+		
+		result = largestCommonString(arr)
+		console.log(result	)
+	</script>
+</body>
+</html>
+===========================================================================
+Q. Max Character 
+===================================================================================
+<!DOCTYPE html>
+<html>
+<body>
+	<script>
+		var str = "entertainment";
+		var obj = {};		
+		for (c of str)
+		{			
+			obj[c] = obj[c] ? obj[c]+1 : 1;
+		} 
+		maxChar = Object.entries(obj).sort().reverse()[0][0]
+		console.log(obj)
+		console.log(maxChar)
+	</script>
+</body>
+</html>
+=======================================================================================
+Q. Remove Special Character
+================================================================================
+<!DOCTYPE html>
+
+<html>
+  <body>
+    <script>
+      let input = "s@ach#i$n";
+      let only_alphabets = input.replace(/[^\w]/g, "");
+      console.log(only_alphabets);
+      let only_special = input.replace(/[\w]/g, "");
+      console.log(only_special);
+
+      console.log(only_alphabets + only_special);
+    </script>
+  </body>
+</html>
+====================================================================================
+Q. Reverse
+===============================================================================
+<html>
+  <body>
+    <script>
+      var str = "SACHIN";
+      document.write("Before Reverse: " + str);
+
+      var rev = str.split("").reverse().join("");
+      document.write("<br> After Reverse: " + rev);
+    </script>
+  </body>
+</html>
+==================================================================================
+Q. Reverse 2
+===============================================================================
+<html>
+  <body>
+    <script>
+      var a = "SACHIN";
+      document.write("Before Reverse: " + a);
+
+      document.write(" <br> ");
+
+      var b = a.split("");
+      document.write(b + " <br> ");
+
+      var c = b.reverse();
+      document.write(c + " <br> ");
+
+      var d = c.join("");
+      document.write(d + " <br> ");
+    </script>
+  </body>
+</html>
+==================================================================================
+Q. Reverse 3
+===============================================================================
+<html>
+
+<body>
+  <script>
+    let str = 'hello';
+    // one way
+    let rev = '';
+    for (i = str.length - 1; i >= 0; i--) {
+      rev = rev + str[i];
+    }
+    console.log(rev)
+
+
+    // Another way
+    let res = ''
+    for (char of str) {
+      res = char + res;
+    }
+    console.log(res)
+  </script>
+</body>
+
+</html>
+==================================================================================
+Q. Reverse 4
+===============================================================================
+<html>
+
+<body>
+	<script>
+		var a = 'sachin'
+
+		var b = a.split('').reduce((rev, c) => {
+			rev = c + rev;
+			return rev;
+		})
+		console.log(b)
+	</script>
+</body>
+
+</html>
+==================================================================================
+Q. REVERSE EVERY WORD
+===============================================================================
+<html>
+  <body>
+    <script>
+      var str = "I Love My India";
+
+      var rev = str.split("").reverse().join("").split(" ").reverse().join(" ");
+      document.write("<br> After Reverse: " + rev);
+    </script>
+  </body>
+</html>
+==================================================================================
+Q. REVERSE WORD
+===============================================================================
+<html>
+  <body>
+    <script>
+      var str = "I Love My India";
+
+      var rev = str.split(" ").reverse().join(" ");
+      document.write("<br> After Reverse: " + rev);
+    </script>
+  </body>
+</html>
+==================================================================================
+Q. SWAP CASE
+===============================================================================
+
+<!DOCTYPE html>
+<html>
+<body>
+	<script>
+		
+		function swapCase(str){
+			result = ''
+			for(ch of str){
+				ch = (/[a-z]/).test(ch) ? ch.toUpperCase() : ch.toLowerCase();
+				result += ch;
+			}
+			return result;
+		}
+
+		input = 'This is jaVaScRipt claSs'
+		output = swapCase(input)
+		console.log(output);
+	</script>
+</body>
+</html>
+==================================================================================
+Q. ABBRIVATION
+===============================================================================
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      function myFun(input) {
+        var output = "";
+
+        arr = input.split(" ").map((word, ind) => {
+          if (ind <= 1) {
+            return word[0] + ".";
+          } else {
+            return word;
+          }
+        });
+        return arr.join(" ");
+      }
+      var input = prompt("enter a string", "rabindra nath tagore");
+      result = myFun(input);
+      alert(result);
+    </script>
+  </body>
+</html>
+==================================================================================
+Q. CHARACTER SHIFT
+===============================================================================
+<body>
+  <script>
+    function alphabet_char_Shift(str) {
+      const charsArr = str.split("");
+      for (let i in charsArr) {
+        let n = charsArr[i].charCodeAt() - "a".charCodeAt(); // 99 - 97
+        n = (n + 1) % 26;
+        charsArr[i] = String.fromCharCode(n + "a".charCodeAt());
+      }
+      return charsArr.join("");
+    }
+
+    console.log(alphabet_char_Shift("abcxyz")); // bcdyza 
+    console.log(alphabet_char_Shift("ABCXYZ"));
+      // bcdyza
+  </script>
+</body>
+
+</html>
+==================================================================================
+Q. COMMON CHARACTER
+===============================================================================
+<html>
+  <head>
+    <script type="text/javascript">
+      function charMap(str) {
+        let obj = {};
+        for (let char of str) {
+          obj[char] = obj[char] ? obj[char] + 1 : 1;
+        }
+        return obj;
+      }
+      function test(inputArr) {
+        //get the longest word to first index
+        inputArr.sort((a, b) => b.length - a.length);
+
+        let word1 = inputArr.shift();
+        let charMapWord1 = charMap(word1);
+
+        let charMapOtherWords = inputArr.map((word) => {
+          return charMap(word);
+        });
+
+        console.log(charMapWord1, charMapOtherWords);
+        let outputArr = [];
+        for (let [char, count] of Object.entries(charMapWord1)) {
+          for (const charMap of charMapOtherWords) {
+            if (Object.keys(charMap).includes(char)) {
+              count = Math.min(count, charMap[char]);
+            } else {
+              count = 0;
+              break;
+            }
+          }
+          while (count--) {
+            outputArr.push(char);
+          }
+        }
+
+        return outputArr;
+      }
+
+      let inputArr = ["code", "road", "load", "moon"];
+      let result = test(inputArr);
+      console.log(result);
+    </script>
+  </head>
+</html>
+==================================================================================
+Q. CREDIT CARD FORMAT
+===============================================================================
+<html>
+
+<body>
+  <script>
+    var input = "1111222233334444";
+
+    let result1 = input.match(/.{1,4}/g).join("-");
+    alert(result1);
+
+    let arr = [];
+    for (let i = 0; i < input.length; i = i + 4) {
+      let str = input.substr(i, 4);
+      arr.push(str);
+    }
+    alert(arr.join("-"));
+  </script>
+</body>
+
+</html>
+==================================================================================
+Q. LONGEST WORD
+===============================================================================
+<html>
+  <body>
+    <script>
+      function findLongestWord(str) {
+        var words = str.split(" ");
+        //['the','quick'...]
+
+        var longestWord = "";
+
+        for (word of words) {
+          if (word.length > longestWord.length) {
+            longestWord = word;
+          }
+        }
+
+        return longestWord;
+      }
+      result = findLongestWord("The quick brown fox jumped over the lazy dog");
+      alert(result);
+    </script>
+  </body>
+</html>
+==================================================================================
