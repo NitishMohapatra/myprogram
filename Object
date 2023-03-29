@@ -1,0 +1,444 @@
+Q. Print Employee Object .
+----------------------------------------------------------------------------------
+<html>
+	<body><h1>
+		<script>
+			var emp = {
+						 name : 'sachin',
+						 age : 35,
+						 address : {
+									 street:'marathalli',
+									 city:'bangalore',
+									 pin:560037,
+									 state:'karnataka'
+								   },
+						 cars : ['audi','bmw','toyota']
+					  }
+			console.log(emp.age);			
+			console.log(emp.address.city);
+			console.log(emp.cars[1]);
+			
+		</script>
+	</body>
+</html>
+-----------------------------------------------------------------------------------
+Q. Key Values 
+------------------------------------------------------------------------------------
+<html>
+
+<body>
+	<h1>
+		<script>
+			var emp = {
+				empId: 101,
+				name: "sachin",
+				age: 35,
+				address: "mumbai",
+			}
+			for (x in emp) { //x=empId,x=name,x=age,x=address
+				document.write(x + "------" + emp[x])
+				document.write('<br>');
+			}
+			document.write('<hr>');
+
+			for (x in emp) {
+				document.write(x + "------" + emp.x)
+				document.write('<br>');
+			}
+		</script>
+</body>
+
+</html>
+-------------------------------------------------------------------------------------
+Q. Object Length
+------------------------------------------------------------------------------------
+<html>
+  <body>
+    <script>
+      var cars = ["tata", "maruti", "bmw", "audi"];
+      console.log(cars.length); // 4
+
+      var employee = {
+        name: "sachin",
+        age: 35,
+        sal: 5000,
+      };
+      var keys = Object.keys(employee); // keys = ['name','age','sal']
+      console.log(keys.length); // 3
+    </script>
+  </body>
+</html>
+-----------------------------------------------------------------------------------------
+Q. Object Deep Cloning
+------------------------------------------------------------------------------------------
+<html>
+  <body>
+    <script>
+      let obj1 = {
+        a: 10,
+        b: [1, 2, 3],
+        c: {
+          d: 30,
+          e: {
+            f: 40,
+          },
+        },
+      };
+      let obj2 = structuredClone(obj1);
+      obj2.b.push(4);
+      console.log(obj1, obj2);
+    </script>
+  </body>
+</html>
+--------------------------------------------------------------------------------------------------
+Q.Object Create VS New
+----------------------------------------------------------------------------------------------------
+<HTML>
+<BODY>
+<script>
+	var car = function(color){
+		this.color = color;
+	}
+	var car1 = new car('red');	
+	var car2 = Object.create(car.prototype);
+	
+	console.dir(car1);
+	console.dir(car2);
+</script>
+</BODY>
+
+</HTML>
+
+---------------------------------------------------------------------------------------------------
+Q. Extend Date Object ?
+------------------------------------------------------------------------------------------------------
+<html>
+	<body>
+		<script>
+			Date.prototype.nextDay = function(){
+			  var currentDate = this.getDate();
+			  return new Date(this.setDate(currentDate +1));
+			}
+
+			var date = new Date(); 
+			console.log(date); 
+			console.log( date.nextDay() );
+		</script>
+	</body>
+</html>
+--------------------------------------------------------------------------------------------------
+Q. IN VS Hasown Property
+------------------------------------------------------------------------------------------------------
+<html>
+<body>
+    <script>
+        class Employee{
+            id;name;sal;
+            constructor(id,name,sal){
+                this.id = id;
+                this.name = name;
+                this.sal = sal;
+            }
+        }
+        Employee.prototype.comp = 'IBM';
+
+        let emp1 = new Employee(101,'sachin',5000);
+        console.log(emp1)
+
+        console.log('sal' in emp1); // true
+        console.log(emp1.hasOwnProperty('sal')); // true
+
+        console.log('comp' in emp1); // true (obj / prototype)
+        console.log(emp1.hasOwnProperty('comp')); // false
+
+        console.log('dob' in emp1); // false (neither in obj nor in prototype)
+        console.log(emp1.hasOwnProperty('dob')); // false
+    </script>
+</body>
+</html>
+-----------------------------------------------------------------------------------------------------------
+Q. Object Compare
+-----------------------------------------------------------------------------------------------------------
+<html>
+  <body>
+    <script>
+      function isEquivalent(obj1, obj2) {
+        var obj1keys = Object.keys(obj1);
+        var obj2keys = Object.keys(obj2);
+
+        if (obj1keys.length != obj2keys.length) {
+          return false;
+        }
+        for (key of obj1keys) {
+          if (obj1[key] !== obj2[key]) {
+            return false;
+          }
+        }
+        return true;
+      }
+      var obj1 = { name: "sachin", age: 35 };
+      var obj2 = { age: 35, name: "sachin" };
+      alert(isEquivalent(obj1, obj2));
+    </script>
+  </body>
+</html>
+----------------------------------------------------------------------------------------------
+Q .Object Creation
+-------------------------------------------------------------------------------------------------
+<html>
+	<body>
+		<script>
+			// 4 ways to create javascript object
+			
+			//1. Object Literal
+			var obj1 = {};
+			console.log(obj1);
+			
+			//2. Object class Create() method
+			var obj2 = Object.create(null);
+			console.log(obj2);
+			
+			//3. new keyword-Object class Constructor
+			var obj3 = new Object();
+			console.log(obj3);
+			
+			//4. Using Constructor/Class
+			function Employee(id,name,sal){
+				this.id = id;
+				this.name = name;
+				this.sal = sal;
+			}
+			var emp1 = new Employee(111,'dipak',5000);
+			var emp2 = new Employee(222,'Akash',6500);
+			var emp3 = new Employee(333,'Dillip',7000);
+			
+		</script>
+	</body>
+</html>
+--------------------------------------------------------------------------------------------------
+Q . Object Method Chaining
+-------------------------------------------------------------------------------------------------------
+<html>
+  <body>
+    <script>
+      let calc = {
+        total: 0,
+        add: function (val) {
+          this.total = this.total + val;
+          return this;
+        },
+        sub: function (val) {
+          this.total = this.total - val;
+          return this;
+        },
+        mul: function (val) {
+          this.total = this.total * val;
+          return this;
+        },
+      };
+      let result = calc.add(10).mul(2).sub(5);
+      console.log(result.total);
+    </script>
+  </body>
+</html>
+
+-----------------------------------------------------------------------------------------------------
+Q. Stringify Parse
+-------------------------------------------------------------------------------------------------------
+<html>
+  <body>
+    <script>
+      let user = {
+        name: "sachin",
+        age: 35,
+        add: "mumbai",
+      };
+      document.write(user); // [object Object] - object cann't be printed
+
+      // convert object to string format
+      let userStr = JSON.stringify(user);
+      document.write(userStr);
+
+      console.log(userStr.name); //undefined - userStr is not an object
+      console.log(typeof userStr);
+
+      // convert the string to object format
+      let userObj = JSON.parse(userStr);
+      console.log(userObj.name);
+      console.log(typeof userObj);
+    </script>
+  </body>
+</html>
+----------------------------------------------------------------------------------------------------------
+Q. Shallow Copy VS Reference Copy
+--------------------------------------------------------------------------------------------
+<script>
+  let user1 = { name: "sachin", age: 45, add: "mumbai" };
+  // a new object is not being created, Reference Copy
+  let user2 = user1; // value copy - No
+
+  user2.age = 46;
+  console.log(user1, user2);
+
+  // Value Copy - yes - Shallow Copy
+  let user3 = Object.assign({}, user1); // a new object gets created
+  user3.name = "sachin123";
+  user3.add = "mumbai123";
+  console.log(user1, user3);
+</script>
+---------------------------------------------------------------------------
+Q. Print  Persion Information From A Object?
+-------------------------------------------------------------
+<html>
+
+<body>
+  <script>
+    let person = { name: "sanjay", age: 30, add: "bangalore" };
+
+    let employee = { id: 101, sal: 5000 };
+    Object.assign(employee, person);
+    console.log(employee);
+
+    let student = { roll: 1, mark: 95 };
+    Object.assign(student, person);
+    console.log(student);
+
+    console.log(person); // person will still have 3 fields
+  </script>
+</body>
+
+</html>
+-------------------------------------------------------------
+Q . How To Create New Object
+------------------------------------------------------
+<script>
+  var obj1 = { a: 10, b: 20, c: { d: 30 } };
+
+  var obj2 = Object.create(obj1);
+  console.log(obj1, obj2);
+
+  console.log(obj1.a, obj1.b, obj1.c.d);
+  console.log(obj2.a, obj2.b, obj2.c.d);
+
+  obj2.a = 15; // it adds a new property 'a' in obj2 with value 15
+  obj2.b = 25; // it adds a new property 'b' in obj2 with value 25
+  obj2.c.d = 35;
+  // obj2.c = { d: 35 }
+
+  console.log(obj1.a, obj1.b, obj1.c.d);
+  console.log(obj2.a, obj2.b, obj2.c.d);
+</script>
+-------------------------------------------------------------
+Q. Difine Property ?
+-------------------------------------------------------------
+<html>
+  <body>
+    <script>
+      // 'use strict'
+      const object1 = {};
+
+      Object.defineProperty(object1, "property1", {
+        value: 42,
+        writable: false,
+      });
+
+      object1.property1 = 77;
+      // throws an error in strict mode
+
+      console.log(object1.property1);
+      // expected output: 42
+    </script>
+  </body>
+</html>
+--------------------------------------------------------------------------
+Q. Nothing can be added to or removed from the properties set of a frozen object ?
+    {read-yes,update-no,delete-no}
+--------------------------------------------------------------------------
+<html>
+
+<body>
+  <script>
+    
+    var Student = {
+      name: "Deepak",
+      age: 35,
+    };
+    console.log(Student);
+    delete Student.age;
+    console.log(Student);
+
+    var Employee = {
+      id: 101,
+      sal: 5000,
+    };
+    console.log(Employee);
+    Object.freeze(Employee);
+
+    delete Employee.sal;
+    console.log(Employee);
+
+    Employee.sal = 6000;
+    console.log(Employee);
+
+    Employee.add = "mumbai";
+    console.log(Employee);
+
+    console.log(Object.isFrozen(Student), Object.isFrozen(Employee));
+
+    let Employee2 = Employee;
+    console.log(Object.isFrozen(Employee), Object.isFrozen(Employee2));
+
+    let Employee3 = Object.assign({}, Employee);
+    console.log(Object.isFrozen(Employee), Object.isFrozen(Employee3));
+  </script>
+</body>
+
+</html>
+-------------------------------------------------------------------------------
+Q. Key Values And Entries ?
+----------------------------------------------------------------------------
+<html>
+  <body>
+    <script>
+      var emp = {
+        name: "sachin",
+        age: 35,
+        address: "mumbai",
+      };
+      a = Object.keys(emp); // returns an array
+      console.log(a); //['name','age','address']
+
+      b = Object.values(emp); // returns an array
+      console.log(b); //['sachin',35,'mumbai']
+
+      c = Object.entries(emp); // array of arrays/entries
+      console.log(c);
+      //[ [name,sachin], [age,35], [address,mumbai] ]
+      //   entry-1       entry-2     entry-3
+    </script>
+  </body>
+</html>
+------------------------------------------------------------------------------------------
+Q. From Entries 
+-----------------------------------------------------------------------------------------
+<html>
+
+<body>
+  <script>
+    var emp = {
+      name: "sachin",
+      age: 35,
+      address: { street: "marathahalli", city: "bangalore", pin: 560037 },
+      cars: ["tata", "honda", "maruti"],
+    };
+    let myEntries = Object.entries(emp);
+    console.log(myEntries);
+    // array of entries [['name','sachin'],['age',35]]
+
+    let obj = Object.fromEntries(myEntries);
+    console.log(obj);
+  </script>
+</body>
+
+</html>
+------------------------------------------------------------------------------------------------
