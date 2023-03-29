@@ -1,0 +1,294 @@
+TYPE OF -------------
+========================================
+<html>
+  <body>
+    <script>
+      console.log(typeof undefined); // "undefined"
+      console.log(typeof 0); // "number"
+      console.log(typeof true); // "boolean"
+      console.log(typeof "foo"); // "string"
+      console.log(typeof Symbol("id")); // "symbol"
+      //Symbol is for unique identifiers.
+      console.log(typeof Math); // "object"  (1)
+      console.log(typeof null); // "object"  (2)
+      console.log(typeof window.alert); // "function"  (3)
+      console.log(typeof NaN); // number
+    </script>
+  </body>
+</html>
+==================================================================
+Q. ARITHMETIC_DEMO 1..HTML
+=======================================================================
+<html>
+  <body>
+    <script>
+      let a = 20;
+      let b = 10;
+
+      console.log(a + b); // 30
+      console.log(a - b); // 10
+      console.log(a * b); // 200
+      console.log(a / b); // 2 quotient
+      console.log(a % b); // 0  Reminder
+      console.log(2 ** 5); // 32 power/exponent
+    </script>
+  </body>
+</html>
+========================================================================
+Q. ASSGNMENT_DEMO.HTML
+=======================================================================
+<html>
+  <body>
+    <script>
+      let a = 5;
+      a += 3; // a = a+3;
+      console.log(a); // 8
+
+      a -= 2;
+      console.log(a); // 6
+
+      a *= 4;
+      console.log(a); // 24
+    </script>
+  </body>
+</html>
+========================================================================
+
+Q. BITWISE_DEMO.HTML
+=======================================================================
+<html>
+  <body bgcolor="cyan">
+    <script>
+      var a = 10;
+      var b = 12;
+
+      alert("a&b: " + (a & b));
+      alert("a&b: " + (a | b));
+      alert("a&b: " + (a ^ b));
+      alert("~4: " + ~4);
+      alert("~-7: " + ~-7);
+    </script>
+  </body>
+</html>
+========================================================================
+
+Q. COMPARISION
+=======================================================================
+<html>
+<body bgcolor=cyan>
+<script>
+alert( '2' > 1 ); // true, string '2' becomes a number 2
+alert( '01' == 1 ); // true, string '01' becomes a number 1
+
+alert( true == 1 ); // true
+alert( false == 0 ); // true
+</script>
+</body>
+</html>
+========================================================================
+
+Q. EQUAL
+=======================================================================
+<html>
+  <body>
+    <script>
+      // == compares only the value, performs implicit type conversion. (equality)
+      // === compares both value and datatype, no type conversion is performed.(Strict equality)
+
+      console.log(5 == "5"); // true
+      console.log(5 === "5"); // false
+
+      console.log(true == 1); // true
+      console.log(true === 1); // false
+
+      console.log(undefined == null); // true
+      console.log(undefined === null); // false
+
+      console.log([10, 20] == "10,20"); // true
+      console.log([10, 20] === "10,20"); // false
+
+      console.log([10, 20] == [10, 20]); //false(adress comparison)
+      console.log([10, 20] === [10, 20]); //false(adress comparison)
+
+      console.log({} == {}); //false-adress comparison
+      console.log({} === {}); //false-adress comparison
+
+      document.write([10, 20]); // array gets converted to string
+      alert([10, 20]);
+
+      console.log('hello' == 'HELLO');
+      console.log('hello' === 'HELLO');
+    </script>
+  </body>
+</html>
+========================================================================
+
+Q. EXPONENT
+=======================================================================
+<html>
+  <body bgcolor="cyan">
+    <script>
+      alert(2 ** 2); // 4  (2 * 2)
+      alert(2 ** 3); // 8  (2 * 2 * 2)
+      alert(2 ** 4); // 16 (2 * 2 * 2 * 2)
+      alert(Math.pow(2, 5)); // 16 (2 * 2 * 2 * 2)
+    </script>
+  </body>
+</html>
+========================================================================
+
+Q. INCREMENT_ DECREMENT
+=======================================================================
+<script>
+	a = 5;
+	b = a++ + ++a + a++;
+	alert("a= " + a);
+	alert("b= " + b);
+
+	var c = 5;
+	d = ++c + c++ + ++c;
+	alert("c= " + c);
+	alert("d= " + d);  
+</script>
+
+========================================================================
+
+Q. INSTANCE OF
+=======================================================================
+<html>
+  <body>
+    <script>
+      var a = 5; // primitive number
+      var b = new Number(6); // Number object
+
+      console.log(typeof a);
+      console.log(a instanceof Number);
+
+      console.log(typeof b);
+      console.log(b instanceof Number);
+
+      var str1 = "hello"; // string datatype
+      var str2 = new String("hiii"); // string object
+
+      console.log(typeof str1);
+      console.log(str1 instanceof String);
+
+      console.log(typeof str2);
+      console.log(str2 instanceof String);
+    </script>
+  </body>
+</html>
+========================================================================
+
+Q. LOGICAL
+=======================================================================
+
+<html>
+  <body>
+    <script>
+      var math = 50;
+      var eng = 70;
+      var comp = 25;
+
+      if (math >= 30 && eng >= 30 && comp >= 30) {
+        alert("pass");
+      } else {
+        alert("fail");
+      }
+    </script>
+  </body>
+</html>
+========================================================================
+
+Q. PRE_POST_DECREMENT
+=======================================================================
+<html>
+<body bgcolor=cyan>
+	<script>
+		var x = 5;
+		y = --x;
+		// x = x-1; x=4;
+		// y = x;  y=4;
+		alert("x: " + x + " y: " + y)
+
+		var a = 5;
+		b = a--; 
+		// b = a;  b=5;
+		// a=a-1;  a=4;
+		alert("a: " + a + " b: " + b)
+	</script>
+</body>
+</html>
+========================================================================
+Q. PRE_POST_INCREMENT
+=========================================================================
+<html>
+<body bgcolor=cyan>
+	<script>
+		var x = 5;
+		y = ++x;  
+		// x=x+1;  x=6; 
+		//y=x;   y=6
+		alert("x: " + x + " y: " + y)    
+
+		var a = 5;
+		b = a++; 
+		// b=a;   b=5; 
+		//a=a+1;  a=6;
+		alert("a: " + a + " b: " + b)  
+	</script>
+</body>
+</html>
+====================================================================
+Q. TERNARY OPERATOR
+====================================================================
+<body>
+	<script>
+		 var a = 10;
+		 var b = 18;
+		 
+		 //res = condition ? true : false;
+		 var g = a>b ? a : b;
+		 alert(g);
+	</script>
+</body>
+</html>
+===================================================
+<html>
+  <body>
+    <script>
+      5 > 6 ? alert("hi") : alert("hello");
+
+      5 < 6 ? alert("hi-2") : alert("hello-2");
+    </script>
+  </body>
+</html>
+==================================================================
+<html>
+<body>
+	<script> 
+		 var a = 7;
+		 var b = 6;
+		 var c = 9;
+		 
+		 var d = a>b ? a : b;
+		 var gst = c>d ? c : d;
+		 alert(gst);
+	</script>
+</body>
+</html>
+=======================================================
+<html>
+<body>
+	<script> 
+		 a = 7;
+		 b = 6;
+		 c = 9;
+		 
+		 var g = a>b && a>c ? a : b>c ? b: c;
+		 
+		 alert(g);
+	</script>
+</body>
+</html>
+====================================================================
